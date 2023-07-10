@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Quiz</title>
+    <style>
+        body {
+            background-color: deeppink;
+        }
+
+        h1 {
+            display: flex;
+            justify-content: center;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+        }
+
+        .button {
+            margin-top: 100px;
+            background-color: salmon;
+            border: 0px;
+            padding: 10px 20px;
+            border-radius: 20px;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="quotes">
+    </div>
+    
+    <button class="button">Generate</button>
+    <script>
+        const quotes = [
+        {
+            author: '--Mother Terresa',
+            text: 'Just when i thought i had a handle on life, the handle broke'
+        },
+
+        {
+            author: '--Alice Herz Sommer',
+            text: 'Hatred eats the soul of the hater, not the hated'
+        },
+
+        {
+            author: '--Albert Einstein',
+            text: 'Stay away from negative people. They have a problem for every solution'
+        },
+
+        {
+            author: '--Albert Einstein',
+            text: 'Any fool can know. The point is to understand'
+        },
+
+        {
+            author: '--Magaret Ahwood',
+            text: 'War is what happens when language fails'
+        },
+
+        {
+            author: '--Tracy A. Sonyah',
+            text: 'Life is what happens when you are busy making other plans'
+        },
+
+        {
+            author: '--Carl Jung',
+            text: 'Thinking is difficult, thats why most people judge'
+        },
+
+        {
+            author: '--Unknown',
+            text: 'We all have a chapter in our lives that we dont read out loud'
+        },
+
+        {
+            author: '--Tracy A. Sonyah',
+            text: 'When you show your emotions, you become vulnerable'
+        },
+
+        {
+            author: '--Tracy Sonyah',
+            text: 'When money, wealth and power becomes the meaning of life, life becomes meaningless'
+        },
+
+        {
+            author: '--Marilyn Monroe',
+            text: 'Imperfection is beauty, madness is genius, it is better to be absolutely ridiculous than to be absolutely boring'
+        },
+
+        {
+            author
+        }
+    ];
+
+    let quotesElement = document.querySelector('.quotes');
+    let generateButton = document.querySelector('.button');
+
+
+    function random() {
+        const randomIndex = Math.floor(Math.random()* quotes.length);
+        quotesElement.innerHTML = `<h1>The Ultimate Quote Generator</h1><p>${quotes[randomIndex].text}</p> <em>${quotes[randomIndex].author}
+        </em>`;
+    }
+    random()
+    generateButton.addEventListener('click', random);
+    setInterval(random, 5000)
+    
+    
+    
+    </script>
+</body>
+</html>
